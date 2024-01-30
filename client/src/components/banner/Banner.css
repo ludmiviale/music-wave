@@ -5,19 +5,19 @@
     justify-content: flex-start;
     width: 100%;
     height: 650px;
-    background-image: url("../../assets/banner.png");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url("../../assets/banner.png");
     background-repeat: no-repeat;
     background-size: cover; 
     text-align: center; 
 }
 
 .banner h1 {
-    color: #e7813b; 
+    color: #d37638; 
     position: absolute;
-    bottom: 300px; /* Ajusta la distancia desde la parte inferior */
-    left: 30px; /* Ajusta la distancia desde la izquierda */
+    bottom: 300px;
+    left: 30px; 
     font-size: 4rem;
-    margin: 0; /* Elimina el margen predeterminado del h1 */
+    margin: 0; 
     padding: 0; 
     margin-top: 200px;
     font-family: 'Lexend', sans-serif;
