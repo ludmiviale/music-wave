@@ -1,0 +1,79 @@
+.nav {
+    position: fixed;
+    top: 0;
+}
+
+.navegation {
+    margin-top: 130px;
+   margin-left: 50px;
+   font-family: 'Lexend', sans-serif;
+}
+
+.navegation a {
+    color: rgb(111, 103, 103);
+}
+
+.detail-container {
+    display: flex;
+    height: 100vh; 
+    margin-top: 30px;
+    font-family: 'Lexend', sans-serif;
+}
+
+.column1 {
+    flex: 1; 
+}
+
+.column1 img {
+    width: 300px;
+    height: auto;
+    margin-left: 80px;
+    border-radius: 7px;
+}
+
+
+button {
+    color: black;
+    position: absolute;
+    bottom: 220px; 
+    left: 210px;
+    margin-top: 200px;
+    font-family: 'Lexend', sans-serif;
+    text-align: left;
+    border: 2px solid black;
+    border-radius: 1000px;
+    padding: 12px 20px;
+    margin: 0px 0px 16px;
+    gap: 8px;
+    background-color: white;
+    font-weight: 600;
+    letter-spacing: 0.03px;
+    cursor: pointer;
+}
+
+.column2 {
+    flex: 2; 
+    background-color: #f2f2f2; /* Cambia el color de fondo de la primera columna según tu diseño */
+}
+
+h3 {
+    font-size:xx-large;
+    margin: 0;
+}
+
+.info1 {
+    display: inline-flex;
+    row-gap: 0.8rem;
+    column-gap: 1.6rem;
+    align-items: start;
+}
+
+#artist {
+    color: rgb(111, 103, 103);
+    text-decoration: underline;
+}
+
+#recordCompany {
+    color: rgb(111, 103, 103);
+    text-decoration: underline;
+}
