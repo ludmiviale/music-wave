@@ -12,6 +12,7 @@ const createSong = async (
   lyrics,
   date,
   music,
+  image,
   categoryId
 ) => {
   const newSong = await Song.create({
@@ -26,6 +27,7 @@ const createSong = async (
     lyrics,
     date,
     music,
+    image,
     categoryId,
   });
 
