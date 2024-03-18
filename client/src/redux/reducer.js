@@ -1,8 +1,9 @@
-import { GET_SONGS, GET_CATEGORIES } from "./action-types";
+import { GET_SONGS, GET_CATEGORIES, GET_SONG_BY_ID } from "./action-types";
 
-let initialState = {
+const initialState = {
   allSongs: [],
   allSongsCopy: [],
+  songDetail: [],
   allCategories: [],
 };
 
@@ -11,13 +12,22 @@ const reducer = (state = initialState, action) => {
     case GET_SONGS:
       return {
         ...state,
-        allSongs: action.payload.data,
+        allSongs: action.payload,
       };
+
+    case GET_SONG_BY_ID:
+      return {
+        ...state,
+        songDetail: action.payload,
+      };
+
     case GET_CATEGORIES:
       return {
         ...state,
-        allCategories: action.payload.data,
+        allCategories: action.payload,
       };
+    default:
+      return state;
   }
 };
 
