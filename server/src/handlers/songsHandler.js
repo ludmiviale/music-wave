@@ -1,5 +1,6 @@
 const getSongByName = require("../controllers/songsControllers/getSongByName");
 const getAllSongs = require("../controllers/songsControllers/getAllSongs");
+const getSongById = require("../controllers/songsControllers/getSongById");
 const createSong = require("../controllers/songsControllers/createSong");
 
 const getSongsHandler = async (req, res) => {
@@ -21,6 +22,20 @@ const getSongsHandler = async (req, res) => {
   }
 };
 
+const getSongByIdHandler = async (req, res) => {
+  const { id } = req.params;
+  try {
+    const songById = await getSongById(id);
+    if (songById) {
+      res.status(200).json(songById);
+    } else {
+      res.status(404).json({ message: "Song not found" });
+    }
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+};
+
 const createSongHandler = async (req, res) => {
   const {
     id,
@@ -34,6 +49,7 @@ const createSongHandler = async (req, res) => {
     lyrics,
     date,
     music,
+    image,
     categoryId,
   } = req.body;
   try {
@@ -49,6 +65,7 @@ const createSongHandler = async (req, res) => {
       lyrics,
       date,
       music,
+      image,
       categoryId
     );
     res.status(201).json(newSong);
@@ -59,5 +76,6 @@ const createSongHandler = async (req, res) => {
 
 module.exports = {
   getSongsHandler,
+  getSongByIdHandler,
   createSongHandler,
 };
