@@ -1,0 +1,29 @@
+.card {
+    border: 1px solid #e2dbdb;
+    border-radius: 7px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 35px;
+    font-family: 'Lexend', sans-serif;
+  }
+
+  .card a {
+    text-decoration: none;
+    color: black;
+  } 
+
+  .card h3 {
+    font-size: medium;
+  }
+
+  .card p {
+    font-size: small;
+    color: rgb(124, 119, 119);
+    margin-top: -15px;
+    margin-top: -15px;
+  }
+
+  .card img {
+    width: 180px;
+    height: auto;
+  }
